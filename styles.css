@@ -5,6 +5,7 @@
   --left-sidebar-text: white;
   --left-sidebar-tab-hover: black;
   --searchbar: #e2e8f0;
+  --sidebar:rgb(0, 183, 255) ;
 }
 * {
   margin: 0;
@@ -29,7 +30,7 @@ body {
 
 /* sidebar */
 .left-sidebar {
-  background-color: rgb(0, 183, 255);
+  background-color: var(--sidebar);
   grid-column: 1/2;
   grid-row: 1 / span 2;
   min-height: 100vh;
@@ -37,7 +38,7 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  /* gap: 25px; */
 }
 
 .odin-container {
@@ -50,11 +51,14 @@ body {
 .tab {
   display: flex;
   gap: 15px;
+  padding: 12px;
   padding-left: 2rem;
+  transition: all ease-in 0.1s;
 }
 .tab:hover {
   cursor: pointer;
   color: var(--left-sidebar-tab-hover);
+  background-color: white;
 }
 .settings {
   margin-top: 50px;
@@ -104,6 +108,38 @@ form>input{
 
 .header-part2{
   padding: 20px;
+  display: flex;
+  gap: 15px;
+}
+.welcome-container{
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* justify-content: center; */
+}
+.div2{
+  display: flex;
+  align-items: center ;
+  justify-content: space-around;
+  gap: 10px;
+}
+.header-part2 button{
+ background-color: var(--sidebar);
+ color: white;
+ padding: 0 20px;
+ border: none;
+ border-radius: 20px;
+ height: 2rem;
+ width: 6rem;
+ transition: all ease-in 0.1s;
+ 
+}
+.header-part2 button:hover{
+  color: var(--left-sidebar-tab-hover);
+  cursor: pointer;
+  height: 2.2rem;
+  font-size: large;
 }
 /* main */
 .main {
