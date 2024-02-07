@@ -68,8 +68,9 @@ body {
 }
 .header-part1{
 display: grid;
-grid-template-columns: 2fr 1fr;
+grid-template-columns: 3fr 1fr;
 align-items: center;
+gap: 10px
 }
 .header-part1>form{
   display: flex;
@@ -88,7 +89,7 @@ form>input{
 }
 .header-part1>div{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   gap: 10px;
 }
@@ -96,6 +97,7 @@ form>input{
   display: flex;
   align-items: center;
   gap: 15px;
+  padding: 10px;
 }
 /* main */
 .main {
