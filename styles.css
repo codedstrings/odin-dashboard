@@ -40,6 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   /* gap: 25px; */
+  box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.371);
 }
 
 .odin-container {
@@ -112,7 +113,7 @@ form>input{
   padding: 20px;
   display: flex;
   gap: 15px;
-  box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.371);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.371);
 }
 .welcome-container{
   flex: 1;
@@ -147,4 +148,6 @@ form>input{
 /* main */
 .main {
   grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
