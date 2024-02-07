@@ -9,6 +9,7 @@
   --card-border: rgba(240, 180, 41, 0.75);
   --body-backgroud: #e2e8f0;
   --gray-txt: #78716c;
+  --card-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.373);
 }
 * {
   margin: 0;
@@ -178,7 +179,10 @@ form > input {
   border-radius: 10px;
   background-color: white;
   border-left: 10px solid var(--card-border);
+  box-shadow:  var(--card-shadow);
+
 }
+
 .card > .icons {
   margin-top: 10px;
   flex: 1;
@@ -203,11 +207,13 @@ form > input {
   border-radius: 10px;
   padding: 30px;
   background-color: white;
+  box-shadow:  var(--card-shadow);
 }
 
 .announcement-card {
   width: 25ch;
   padding: 1rem 0;
+ 
 }
 .announcement-card:not(:first-of-type) {
   border-top: 3px solid var(--body-backgroud);
