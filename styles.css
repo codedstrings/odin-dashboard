@@ -121,6 +121,7 @@ form > input {
   display: flex;
   gap: 15px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.371);
+  z-index: 1;
 }
 .welcome-container {
   flex: 1;
