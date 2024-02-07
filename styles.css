@@ -5,7 +5,8 @@
   --left-sidebar-text: white;
   --left-sidebar-tab-hover: black;
   --searchbar: #e2e8f0;
-  --sidebar:rgb(0, 183, 255) ;
+  --sidebar: rgb(0, 183, 255);
+  --card-border: rgba(240, 180, 41, 0.75);
 }
 * {
   margin: 0;
@@ -26,7 +27,7 @@ body {
 .page-wrapper {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 200px 1fr;
 }
 
 /* sidebar */
@@ -39,7 +40,6 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;
-  /* gap: 25px; */
   box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.371);
 }
 
@@ -73,22 +73,22 @@ body {
   flex-direction: column;
   background-color: white;
 }
-.header-part1{
-display: grid;
-grid-template-columns: 3fr 1fr;
-align-items: center;
-gap: 10px
+.header-part1 {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  gap: 10px;
 }
-.header-part1>form{
+.header-part1 > form {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 20px;
   padding-right: 10px;
-
 }
-form>input{
+form > input {
   min-width: 200px;
   width: 80%;
   border-radius: 10px;
@@ -96,50 +96,53 @@ form>input{
   border: none;
   background-color: var(--searchbar);
 }
-.header-part1>div{
+.header-part1 > div {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 10px;
 }
-.header-part1 .profile{
+.header-part1 .profile {
   display: flex;
   align-items: center;
   gap: 15px;
   padding: 10px;
 }
+.header-part1 > div > i {
+  font-size: larger;
+}
 
-.header-part2{
-  padding: 20px;
+.header-part2 {
+  flex: 1;
+  padding: 0 20px;
   display: flex;
   gap: 15px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.371);
 }
-.welcome-container{
+.welcome-container {
   flex: 1;
   display: flex;
   gap: 10px;
   align-items: center;
   /* justify-content: center; */
 }
-.div2{
+.div2 {
   display: flex;
-  align-items: center ;
+  align-items: center;
   justify-content: space-around;
   gap: 10px;
 }
-.header-part2 button{
- background-color: var(--sidebar);
- color: white;
- padding: 0 20px;
- border: none;
- border-radius: 20px;
- height: 2rem;
- width: 6rem;
- transition: all ease-in 0.1s;
- 
+.header-part2 button {
+  background-color: var(--sidebar);
+  color: white;
+  padding: 0 20px;
+  border: none;
+  border-radius: 20px;
+  height: 2rem;
+  width: 6rem;
+  transition: all ease-in 0.1s;
 }
-.header-part2 button:hover{
+.header-part2 button:hover {
   color: var(--left-sidebar-tab-hover);
   cursor: pointer;
   height: 2.2rem;
@@ -149,5 +152,37 @@ form>input{
 .main {
   grid-column: 2/3;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
+  padding: 20px;
+}
+
+.projects {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 45%));
+  gap: 20px;
+  /* background-color: red; */
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: white;
+  border-left: 10px solid var(--card-border);
+}
+.card > .icons {
+  margin-top: 10px;
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  align-items: flex-end;
+  font-size: large;
+}
+
+.card i:hover {
+  color: var(--card-border);
+  cursor: pointer;
 }
