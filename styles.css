@@ -70,6 +70,7 @@ body {
   cursor: pointer;
   color: var(--left-sidebar-tab-hover);
   background-color: white;
+  padding-left: 2.5rem;
 }
 .settings {
   margin-top: 50px;
@@ -136,6 +137,13 @@ form > input {
   align-items: center;
   /* justify-content: center; */
 }
+.user-id{
+  transition: all 0.1s ease-in;
+}
+.user-id:hover {
+  border-radius: 15px;
+  padding: 15px;
+}
 .div2 {
   display: flex;
   align-items: center;
@@ -199,10 +207,15 @@ form > input {
 .card > p {
   color: var(--gray-txt);
 }
+.card i {
+  transition: all ease 0.1s;
+}
 .card i:hover {
   color: var(--card-border);
+  padding: 0 2px;
   cursor: pointer;
 }
+
 /* right  sidebar */
 .announcements-wrapper {
   margin-top: 20px;
@@ -262,7 +275,6 @@ form > input {
 
 .trend + .trend {
   margin-top: 1.1rem;
-  /* border-top: 1px solid var(--body-backgroud); */
 }
 
 .trend .picture {
