@@ -10,7 +10,12 @@
   --body-backgroud: #e2e8f0;
   --gray-txt: #78716c;
   --card-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.373);
+  --avatar1: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/06fbe298931623.5ee79b6a90221.jpg);
+  --avatar2: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/2e80bb98931623.5ee79b6a8f342.jpg);
+  --avatar3: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/8394f798931623.5ee79b6a909ea.jpg);
+  --avatar4: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/baa20698931623.5ee79b6a8ec2b.jpg);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -179,8 +184,7 @@ form > input {
   border-radius: 10px;
   background-color: white;
   border-left: 10px solid var(--card-border);
-  box-shadow:  var(--card-shadow);
-
+  box-shadow: var(--card-shadow);
 }
 
 .card > .icons {
@@ -207,16 +211,15 @@ form > input {
   border-radius: 10px;
   padding: 30px;
   background-color: white;
-  box-shadow:  var(--card-shadow);
+  box-shadow: var(--card-shadow);
 }
 
 .announcement-card {
   width: 25ch;
   padding: 1rem 0;
- 
 }
 .announcement-card:not(:first-of-type) {
-  border-top: 3px solid var(--body-backgroud);
+  border-top: 1px solid var(--body-backgroud);
 }
 .announcement-card > h4 {
   margin-bottom: 5px;
@@ -232,4 +235,68 @@ form > input {
   max-width: 400px;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+/* trending */
+.trending > h3 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.trending .trending-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: var(--card-shadow);
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.trend + .trend {
+  margin-top: 1.1rem;
+  /* border-top: 1px solid var(--body-backgroud); */
+}
+
+.trend .picture {
+  background: var(--avatar1) center center / cover no-repeat;
+  background-color: var(--card-border);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.trend .account {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.trend .username {
+  font-weight: 500;
+  margin-bottom: 0.15rem;
+}
+
+.trend-1 .picture {
+  background: var(--avatar1) center center/ cover no-repeat;
+}
+.trend-2 .picture {
+  background-image: var(--avatar2);
+}
+
+.trend-3 .picture {
+  background-image: var(--avatar3);
+}
+
+.trend-4 .picture {
+  background-image: var(--avatar4);
 }
