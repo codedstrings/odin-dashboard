@@ -36,7 +36,7 @@ body {
   display: grid;
   grid-template-columns: 250px 4fr;
   grid-template-rows: 200px 1fr;
-  height: 100vh; /*helps for overflow-scrolling */
+  height: 100%; /*helps for overflow-scrolling */
 }
 
 /* sidebar */
